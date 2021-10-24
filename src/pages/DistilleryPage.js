@@ -42,7 +42,8 @@ function DistilleryPage(){
                 </tbody>
             </table>
 
-            <br></br>
+            <h2>Weather</h2>
+            
             <table>
                 <thead>
                     <tr>

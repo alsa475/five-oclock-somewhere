@@ -43,7 +43,8 @@ function BreweryPage(){
             </table>
             <br></br>
 
-            <br></br>
+            <h2>Weather</h2>
+            
             <table>
                 <thead>
                     <tr>

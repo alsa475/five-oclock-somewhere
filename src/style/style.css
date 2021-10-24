@@ -8,6 +8,12 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    color: forestgreen;
+    font-size: 30px;
+    text-align: center;
+}
+
 label {
     font-size: 24px;
     color: brown;
@@ -60,4 +66,9 @@ nav {
 form {
     text-align: center;
     justify-content: center;
+}
+
+table, th, td {
+    border: 1px solid black;
+    background: rgba(241, 238, 230, 0.945);
 }
