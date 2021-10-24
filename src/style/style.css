@@ -1,0 +1,63 @@
+body {
+    background-color: bisque;
+}
+
+h1 {
+    color: maroon;
+    font-size: 40px;
+    text-align: center;
+}
+
+label {
+    font-size: 24px;
+    color: brown;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 24px;
+    color: brown;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    border: 1px solid black;
+    
+}
+
+.selection {
+    display: inline-block;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+input {
+    border: 1px solid black;
+    font-size: 24px;
+    width: 32.8%;
+}
+
+a:link {
+    color: chocolate;
+}
+
+a:visited {
+    color: orange;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav {
+    text-align: center;
+}
+
+form {
+    text-align: center;
+    justify-content: center;
+}
