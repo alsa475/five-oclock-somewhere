@@ -90,6 +90,9 @@ function HomePage(){
                 <button onClick={e => {e.preventDefault();
                     handleSubmit(location, category);}}>Submit</button>
             </form> 
+
+            <br></br>
+            <a href="https://pixabay.com/">Images from pixabay</a>
         </div>
     );  
 }

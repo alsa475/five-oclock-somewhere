@@ -51,7 +51,7 @@ a:link {
 }
 
 a:visited {
-    color: orange;
+    color: darkorange;
 }
 
 table {
@@ -71,4 +71,9 @@ form {
 table, th, td {
     border: 1px solid black;
     background: rgba(241, 238, 230, 0.945);
+}
+
+a {
+    margin-left: 20px;
+    margin-bottom: 20px;
 }
