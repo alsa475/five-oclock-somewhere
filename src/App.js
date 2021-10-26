@@ -5,6 +5,10 @@ import HomePage from './pages/HomePage';
 import BreweryPage from './pages/BreweryPage';
 import WineryPage from './pages/WineryPage';
 import DistilleryPage from './pages/DistilleryPage';
+import breweries from './data/breweries';
+import wineries from './data/wineries';
+import distilleries from './data/distilleries';
+import weather from './data/weather';
 
 
 function App() {
@@ -19,15 +23,15 @@ function App() {
           </Route>
           
           <Route path="/breweries">
-            <BreweryPage />
+            <BreweryPage breweries={breweries} weather={weather}/>
           </Route>
           
           <Route path="/wineries">
-            <WineryPage />
+            <WineryPage wineries={wineries} weather={weather}/>
           </Route>
         
           <Route path="/distilleries">
-            <DistilleryPage />
+            <DistilleryPage distilleries={distilleries} weather={weather}/>
           </Route>
 
         </header>
