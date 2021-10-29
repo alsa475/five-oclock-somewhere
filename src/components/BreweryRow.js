@@ -1,8 +1,8 @@
-function BreweryRow({brewery}) {
+function BreweryRow({ result }) {
     return (
         <tr>
-            <td>{brewery.business}</td>
-            <td>{brewery.rating}</td>
+            <td>{result.business}</td>
+            <td>{result.rating}</td>
         </tr>
     )
 }

@@ -1,7 +1,7 @@
 import BreweryRow from '../components/BreweryRow';
 
 
-function BreweryTable({breweries}) {
+function BreweryTable({ results }) {
 
     return (
         <table>
@@ -14,7 +14,7 @@ function BreweryTable({breweries}) {
             </thead>
 
             <tbody>
-                {breweries.map((brewery, i) => <BreweryRow brewery={brewery} key={i}/>)}
+                {results.map((result, i) => <BreweryRow result={result} key={i}/>)}
             </tbody>
                 
         </table>

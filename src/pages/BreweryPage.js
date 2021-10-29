@@ -4,13 +4,13 @@ import BreweryTable from '../components/BreweryTable';
 import WeatherTable from '../components/WeatherTable';
 
 
-function BreweryPage({ breweries, weather }){
+function BreweryPage({ results, weather }){
 
     return (
         <div>
             <h1>Breweries</h1>
 
-            <BreweryTable breweries={breweries}></BreweryTable>
+            <BreweryTable results={results}></BreweryTable>
             <br></br>
 
             <h2>Weather</h2>

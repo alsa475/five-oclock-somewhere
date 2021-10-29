@@ -9,6 +9,7 @@ import breweries from './data/breweries';
 import wineries from './data/wineries';
 import distilleries from './data/distilleries';
 import weather from './data/weather';
+import results from './data/results';
 
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
           </Route>
           
           <Route path="/breweries">
-            <BreweryPage breweries={breweries} weather={weather}/>
+            <BreweryPage results={results} weather={weather}/>
           </Route>
           
           <Route path="/wineries">
