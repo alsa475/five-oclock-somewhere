@@ -5,11 +5,12 @@ import HomePage from './pages/HomePage';
 import BreweryPage from './pages/BreweryPage';
 import WineryPage from './pages/WineryPage';
 import DistilleryPage from './pages/DistilleryPage';
-import breweries from './data/breweries';
 import wineries from './data/wineries';
 import distilleries from './data/distilleries';
 import weather from './data/weather';
-import results from './data/results';
+import breweries from './data/breweries';
+import searchResults from './components/SaveResults';
+
 
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
           </Route>
           
           <Route path="/breweries">
-            <BreweryPage results={results} weather={weather}/>
+            <BreweryPage breweries={breweries} weather={weather}/>
           </Route>
           
           <Route path="/wineries">

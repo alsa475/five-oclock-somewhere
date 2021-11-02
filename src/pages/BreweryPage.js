@@ -2,15 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import BreweryTable from '../components/BreweryTable';
 import WeatherTable from '../components/WeatherTable';
+import searchResults from '../components/SaveResults';
 
 
-function BreweryPage({ results, weather }){
+function BreweryPage( { breweries, weather }){
 
     return (
         <div>
             <h1>Breweries</h1>
-
-            <BreweryTable results={results}></BreweryTable>
+            
+            <BreweryTable results={breweries}></BreweryTable>
             <br></br>
 
             <h2>Weather</h2>

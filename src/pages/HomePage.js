@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import '../style/style.css';
+import { SaveResults } from '../components/SaveResults';
 
 
 function HomePage(){
@@ -9,8 +10,30 @@ function HomePage(){
     const [category, setCategory] = useState('');
     let history = useHistory();
 
-    function handleSubmit(location, category) {
+    async function handleSubmit(location, category) {
+
+        let sendInfo = {'location': location, 'category': category};
+        let results = [];
+        let firstText = "const results=";
+        let lastText = "\nexport default results";
+
+        await fetch('http://127.0.0.1:5000/', {
+            method: 'POST',
+            credentials: 'same-origin',
+            headers: { "Content-Type": "application/json",
+                        "Access-Control-Allow-Origin": "http://127.0.0.1:5000/"},
+            body: JSON.stringify(sendInfo)
+        }).then(response => response.json())
+            .then(data => {
+                for (let i=0; i <= 4; i++) {
+                    results.push(data[i])
+                };
+            })
+            .catch(error => console.error(error));
+
+        SaveResults(results);
         
+
         if (category === "breweries"){
             history.push("/breweries")   
         };

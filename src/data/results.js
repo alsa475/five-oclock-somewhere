@@ -1,2 +1,0 @@
-const results=[{"business": "Bearded Owl Brewing", "rating": 4.5}, {"business": "Obed & Isaac's Microbrewery and Eatery - Peoria", "rating": 3.5}, {"business": "Industry  Brewing", "rating": 4.0}, {"business": "Crafted DIY Studio & Bar", "rating": 5.0}]
-export default results
