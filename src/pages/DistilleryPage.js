@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import DistilleryTable from '../components/DistilleryTable';
 import WeatherTable from '../components/WeatherTable';
+import { searchResults } from '../components/SaveResults';
 
 
 function DistilleryPage({ distilleries, weather }){
@@ -10,7 +11,7 @@ function DistilleryPage({ distilleries, weather }){
         <div>
             <h1>Distilleries</h1>
 
-            <DistilleryTable distilleries={distilleries}></DistilleryTable>
+            <DistilleryTable distilleries={searchResults}></DistilleryTable>
             <br></br>
 
             <h2>Weather</h2>

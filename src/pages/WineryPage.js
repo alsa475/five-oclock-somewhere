@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import WineryTable from '../components/WineryTable';
 import WeatherTable from '../components/WeatherTable';
+import { searchResults } from '../components/SaveResults';
 
 
 function WineryPage({ wineries, weather }){
@@ -10,7 +11,7 @@ function WineryPage({ wineries, weather }){
         <div>
             <h1>Wineries</h1>
 
-            <WineryTable wineries={wineries}></WineryTable>
+            <WineryTable wineries={searchResults}></WineryTable>
             <br></br>
             
             <h2>Weather</h2>

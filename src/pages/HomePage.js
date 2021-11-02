@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import '../style/style.css';
-import { SaveResults } from '../components/SaveResults';
+import { searchResults, SaveResults } from '../components/SaveResults';
 
 
 function HomePage(){
@@ -32,8 +32,8 @@ function HomePage(){
             .catch(error => console.error(error));
 
         SaveResults(results);
+        console.log('after save', searchResults);
         
-
         if (category === "breweries"){
             history.push("/breweries")   
         };
