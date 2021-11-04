@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 import DistilleryTable from '../components/DistilleryTable';
 import WeatherTable from '../components/WeatherTable';
 import { searchResults } from '../components/SaveResults';
+import { weatherConditions } from '../components/SaveWeather';
 
 
-function DistilleryPage({ distilleries, weather }){
+function DistilleryPage({ weather }){
 
     return (
         <div>

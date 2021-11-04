@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import '../style/style.css';
-import { searchResults, SaveResults } from '../components/SaveResults';
+import { SaveResults } from '../components/SaveResults';
 
 
 function HomePage(){
@@ -14,8 +14,6 @@ function HomePage(){
 
         let sendInfo = {'location': location, 'category': category};
         let results = [];
-        let firstText = "const results=";
-        let lastText = "\nexport default results";
 
         await fetch('http://127.0.0.1:5000/', {
             method: 'POST',
@@ -32,7 +30,6 @@ function HomePage(){
             .catch(error => console.error(error));
 
         SaveResults(results);
-        console.log('after save', searchResults);
         
         if (category === "breweries"){
             history.push("/breweries")   

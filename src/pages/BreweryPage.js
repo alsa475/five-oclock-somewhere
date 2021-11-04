@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 import BreweryTable from '../components/BreweryTable';
 import WeatherTable from '../components/WeatherTable';
 import { searchResults } from '../components/SaveResults';
+import { weatherConditions } from '../components/SaveWeather';
 
 
-function BreweryPage( { breweries, weather }){
+function BreweryPage( { weather }){
 
     console.log("brew page", searchResults);
     return (

@@ -9,8 +9,6 @@ import wineries from './data/wineries';
 import distilleries from './data/distilleries';
 import weather from './data/weather';
 import breweries from './data/breweries';
-import searchResults from './components/SaveResults';
-
 
 
 function App() {
@@ -25,15 +23,15 @@ function App() {
           </Route>
           
           <Route path="/breweries">
-            <BreweryPage breweries={breweries} weather={weather}/>
+            <BreweryPage weather={weather}/>
           </Route>
           
           <Route path="/wineries">
-            <WineryPage wineries={wineries} weather={weather}/>
+            <WineryPage weather={weather}/>
           </Route>
         
           <Route path="/distilleries">
-            <DistilleryPage distilleries={distilleries} weather={weather}/>
+            <DistilleryPage weather={weather}/>
           </Route>
 
         </header>
