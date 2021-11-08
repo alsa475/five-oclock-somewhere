@@ -6,7 +6,7 @@ import { searchResults } from '../components/SaveResults';
 import { weatherConditions } from '../components/SaveWeather';
 
 
-function DistilleryPage({ weather }){
+function DistilleryPage(){
 
     return (
         <div>
@@ -17,7 +17,7 @@ function DistilleryPage({ weather }){
 
             <h2>Weather</h2>
             
-            <WeatherTable weather={weather[0]}></WeatherTable>
+            <WeatherTable weather={weatherConditions[0]}></WeatherTable>
             <br></br>
 
             <br></br>

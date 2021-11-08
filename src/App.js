@@ -5,10 +5,7 @@ import HomePage from './pages/HomePage';
 import BreweryPage from './pages/BreweryPage';
 import WineryPage from './pages/WineryPage';
 import DistilleryPage from './pages/DistilleryPage';
-import wineries from './data/wineries';
-import distilleries from './data/distilleries';
 import weather from './data/weather';
-import breweries from './data/breweries';
 
 
 function App() {

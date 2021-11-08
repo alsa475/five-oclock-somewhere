@@ -6,9 +6,8 @@ import { searchResults } from '../components/SaveResults';
 import { weatherConditions } from '../components/SaveWeather';
 
 
-function BreweryPage( { weather }){
+function BreweryPage(){
 
-    console.log("brew page", searchResults);
     return (
         <div>
             <h1>Breweries</h1>
@@ -18,7 +17,7 @@ function BreweryPage( { weather }){
 
             <h2>Weather</h2>
 
-            <WeatherTable weather={weather[0]}></WeatherTable>
+            <WeatherTable weather={weatherConditions[0]}></WeatherTable>
             <br></br>
             
             <nav>

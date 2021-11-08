@@ -67,12 +67,22 @@ form {
     justify-content: center;
 }
 
-table, th, td {
+table, td {
+    width: 600px;
     border: 1px solid black;
     background: rgba(241, 238, 230, 0.945);
+}
+
+th {
+    border: 1px solid black;
+    background: cornsilk;
 }
 
 a {
     margin-left: 20px;
     margin-bottom: 20px;
+}
+
+.rating {
+    text-align: center;
 }

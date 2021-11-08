@@ -2,7 +2,7 @@ function BreweryRow({ result }) {
     return (
         <tr>
             <td>{result.business}</td>
-            <td>{result.rating}</td>
+            <td class="rating">{result.rating}</td>
         </tr>
     )
 }

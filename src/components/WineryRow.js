@@ -2,7 +2,7 @@ function WineryRow({winery}) {
     return (
         <tr>
             <td>{winery.business}</td>
-            <td>{winery.rating}</td>
+            <td class="rating">{winery.rating}</td>
         </tr>
     )
 }

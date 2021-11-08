@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import '../style/style.css';
 import { SaveResults } from '../components/SaveResults';
+import { SaveWeather } from '../components/SaveWeather';
 
 
 function HomePage(){
@@ -12,25 +13,34 @@ function HomePage(){
 
     async function handleSubmit(location, category) {
 
-        let sendInfo = {'location': location, 'category': category};
         let results = [];
+        let w = [];
+        
+        let city = location;
+        city = city.slice(0, -4);
+        let weatherUrl = 'http://127.0.0.1:5050/getWeather?city=' + city;
+        let businessUrl = 'http://127.0.0.1:5000/results?location=' + location + '&term=' + category;
 
-        await fetch('http://127.0.0.1:5000/', {
-            method: 'POST',
-            credentials: 'same-origin',
-            headers: { "Content-Type": "application/json",
-                        "Access-Control-Allow-Origin": "http://127.0.0.1:5000/"},
-            body: JSON.stringify(sendInfo)
-        }).then(response => response.json())
+        // Call Weather service to get current conditions
+        await fetch(weatherUrl)
+            .then(response => response.json())
+            .then(data => w.push(data))
+            .catch(error => console.error(error));
+        
+        SaveWeather(w);
+
+        // Call business service to get array of business objects
+        await fetch(businessUrl)
+            .then(response => response.json())
             .then(data => {
                 for (let i=0; i <= 4; i++) {
                     results.push(data[i])
                 };
             })
             .catch(error => console.error(error));
-
-        SaveResults(results);
         
+        SaveResults(results);
+
         if (category === "breweries"){
             history.push("/breweries")   
         };

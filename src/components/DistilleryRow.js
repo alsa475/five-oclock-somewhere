@@ -2,7 +2,7 @@ function DistilleryRow({distillery}) {
     return (
         <tr>
             <td>{distillery.business}</td>
-            <td>{distillery.rating}</td>
+            <td class="rating">{distillery.rating}</td>
         </tr>
     )
 }

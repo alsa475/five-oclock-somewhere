@@ -9,11 +9,10 @@ function WeatherTable({weather}) {
             </thead>
 
             <tbody>            
-                <tr>{weather.conditions}</tr>
-                <tr>Temperature: {weather.temperature} degrees</tr>
-                <tr>Precipitation: {weather.precipitation}%</tr>
+                <tr>{weather.weather}</tr>
+                <tr>Temperature: {weather.temp}</tr>
                 <tr>Humidity: {weather.humidity}%</tr>
-                <tr>Wind: {weather.wind} mph</tr>
+                <tr>Wind: {weather.wind_speed} mph</tr>
 
             </tbody>
         </table>
