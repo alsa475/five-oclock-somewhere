@@ -1,13 +1,11 @@
 let searchResults = [];
 
 
-function SaveResults(props) {
+function SaveResults(businesses) {
 
-    searchResults = props;
-    //console.log("inside function", searchResults['0']);
+    searchResults = businesses;
 
     return searchResults;
-
 }
 
 export { searchResults, SaveResults };

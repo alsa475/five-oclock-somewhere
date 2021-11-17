@@ -11,10 +11,12 @@ function HomePage(){
     const [category, setCategory] = useState('');
     let history = useHistory();
 
+    // Function to call services and save data when submit button is clicked
     async function handleSubmit(location, category) {
 
+        // Initialize business weather results
         let results = [];
-        let w = [];
+        let weather = [];
         
         let city = location;
         city = city.slice(0, -4);
@@ -24,10 +26,10 @@ function HomePage(){
         // Call Weather service to get current conditions
         await fetch(weatherUrl)
             .then(response => response.json())
-            .then(data => w.push(data))
+            .then(data => weather.push(data))
             .catch(error => console.error(error));
         
-        SaveWeather(w);
+        SaveWeather(weather);
 
         // Call business service to get array of business objects
         await fetch(businessUrl)
@@ -41,6 +43,7 @@ function HomePage(){
         
         SaveResults(results);
 
+        // Navigate to the desired results page
         if (category === "breweries"){
             history.push("/breweries")   
         };
@@ -60,63 +63,45 @@ function HomePage(){
             <form>
                 <fieldset required="required">
         
+                {/* Get location from user */}
                 <label>Where to?  
-                    <input type="text" value={location} size="30" maxlength="100" 
+                    <input class="where" type="text" value={location} size="30" maxlength="100" 
                     placeholder="City, State (e.g. Colorado Springs, CO)" required="required"
                     onChange={e => setLocation(e.target.value)}/>
                 </label>
       
-                <section>
+                    <section>
             
-                <p>What would you like to find? (select one)</p>
-                    <input type="image" name="beer" value="breweries"
-                        src="images/beer.jpg" 
-                        alt="Flight of beer"
-                        height="300"
-                        onClick={e => {setCategory(e.target.value);
-                            e.preventDefault();
-                        }}
-                        />
+                        <p>What would you like to find? (select one)</p>
 
-                    <input type="image" name="wine" value="wineries" 
-                        src="images/wine.jpg" 
-                        alt="Grapes and glasses of wine"
-                        height="300"
-                        onClick={e => {setCategory(e.target.value);
-                            e.preventDefault();
-                        }}/>
-
-                    <input type="image" name="whiskey" value="distilleries" 
-                        src="images/whiskey.jpg" 
-                        alt="Bottles of whiskey"
-                        height="300"
-                        onClick={e => {setCategory(e.target.value);
-                            e.preventDefault();
-                        }}/>
-
+                        {/* Images of categories */}
+                        <img src="images/beer.jpg" alt="Flight of beer" height="300"></img>
+                        <img src="images/wine.jpg" alt="Grapes and glasses of wine" height="300"></img>
+                        <img src="images/whiskey.jpg" alt="Bottles of whiskey" height="300"></img>
                     
-
-                    <label class="selection">Breweries 
-                        <input type="radio" value="breweries"
-                        onClick={e => {setCategory(e.target.value);
-                        }}/>
-                    </label>
-                    <label class="selection">Wineries 
-                        <input type="radio" value="wineries"
-                        onClick={e => {setCategory(e.target.value);
-                        }}/>
-                    </label>
-                    <label class="selection">Distilleries
-                        <input type="radio" value="distilleries"
-                        onClick={e => {setCategory(e.target.value);
-                        }}/>
-                    </label>
-
+                        {/* Radio Buttons to select a category */}
+                        <label class="selection">Breweries 
+                            <input type="radio" value="breweries"
+                            onClick={e => {setCategory(e.target.value);
+                            }}/>
+                        </label>
+                        <label class="selection">Wineries 
+                            <input type="radio" value="wineries"
+                            onClick={e => {setCategory(e.target.value);
+                            }}/>
+                        </label>
+                        <label class="selection">Distilleries
+                            <input type="radio" value="distilleries"
+                            onClick={e => {setCategory(e.target.value);
+                            }}/>
+                        </label>
 
                     </section>
-                </fieldset>
 
+                </fieldset>
                 <br></br>
+
+                {/* Submit button */}
                 <button onClick={e => {e.preventDefault();
                     handleSubmit(location, category);}}>Submit</button>
             </form> 

@@ -1,11 +1,9 @@
-//import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import BreweryPage from './pages/BreweryPage';
 import WineryPage from './pages/WineryPage';
 import DistilleryPage from './pages/DistilleryPage';
-import weather from './data/weather';
 
 
 function App() {
@@ -20,15 +18,15 @@ function App() {
           </Route>
           
           <Route path="/breweries">
-            <BreweryPage weather={weather}/>
+            <BreweryPage/>
           </Route>
           
           <Route path="/wineries">
-            <WineryPage weather={weather}/>
+            <WineryPage/>
           </Route>
         
           <Route path="/distilleries">
-            <DistilleryPage weather={weather}/>
+            <DistilleryPage/>
           </Route>
 
         </header>

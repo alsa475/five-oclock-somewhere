@@ -1,13 +1,11 @@
 let weatherConditions = [];
 
 
-function SaveWeather(props) {
+function SaveWeather(weather) {
 
-    weatherConditions = props;
-    //console.log("inside function", searchResults['0']);
+    weatherConditions = weather;
 
     return weatherConditions;
-
 }
 
 export { weatherConditions, SaveWeather };

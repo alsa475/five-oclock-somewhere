@@ -26,10 +26,10 @@ p {
 }
 
 img {
-    display: block;
+    display: inline-block;
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+    width: 30%;
     border: 1px solid black;
     
 }
@@ -38,6 +38,7 @@ img {
     display: inline-block;
     width: 32.8%;
 }
+
 
 input {
     border: 1px solid black;
@@ -85,4 +86,8 @@ a {
 
 .rating {
     text-align: center;
+}
+
+.where {
+    margin-left: 10px;
 }
