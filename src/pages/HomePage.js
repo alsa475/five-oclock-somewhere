@@ -1,6 +1,7 @@
+import '../App.css';
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import '../style/style.css';
+
 import { SaveResults } from '../components/SaveResults';
 import { SaveWeather } from '../components/SaveWeather';
 
@@ -35,7 +36,8 @@ function HomePage(){
         await fetch(businessUrl)
             .then(response => response.json())
             .then(data => {
-                for (let i=0; i <= 4; i++) {
+                let index = data.length
+                for (let i=0; i < index; i++) {
                     results.push(data[i])
                 };
             })

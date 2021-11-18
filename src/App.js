@@ -14,7 +14,7 @@ function App() {
         <header className="App-header">
           
           <Route path="/" exact>
-            <HomePage />
+            <HomePage/>
           </Route>
           
           <Route path="/breweries">
