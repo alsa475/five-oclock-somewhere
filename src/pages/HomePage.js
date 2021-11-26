@@ -12,7 +12,9 @@ function HomePage(){
     const [category, setCategory] = useState('');
     let history = useHistory();
     
+    //********************************* */
     // Function to call services and save data when submit button is clicked
+    //********************************* */
     async function handleSubmit(location, category) {
 
         // Initialize business and weather results
@@ -30,12 +32,13 @@ function HomePage(){
             .then(data => weather.push(data))
             .catch(error => console.error(error));
         
-        // Messge for no weather results
+        // Message if no weather results
         const errorMessage = "Error 404: Something went wrong. Are you sure you entered a valid city?";
         if (weather[0] === errorMessage){
             weather = [];
             weather.push({'weather': "No results found"});
         }
+
         SaveWeather(weather);
 
         // Call business service to get array of business objects
@@ -49,10 +52,11 @@ function HomePage(){
             })
             .catch(error => console.error(error));
         
-        // Message for no business results
+        // Message if no business results
         if (results.length === 0){
             results.push({'business': "No results found"});
         }
+        
         SaveResults(results);
 
         // Navigate to the desired results page
