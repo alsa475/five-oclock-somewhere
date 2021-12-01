@@ -1,7 +1,6 @@
 import '../App.css';
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-
 import { SaveResults } from '../components/SaveResults';
 import { SaveWeather } from '../components/SaveWeather';
 
@@ -12,9 +11,7 @@ function HomePage(){
     const [category, setCategory] = useState('');
     let history = useHistory();
     
-    //********************************* */
     // Function to call services and save data when submit button is clicked
-    //********************************* */
     async function handleSubmit(location, category) {
 
         // Initialize business and weather results
@@ -127,6 +124,5 @@ function HomePage(){
         </div>
     );  
 }
-
 
 export default HomePage;

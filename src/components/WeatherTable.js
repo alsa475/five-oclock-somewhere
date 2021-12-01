@@ -19,5 +19,4 @@ function WeatherTable({weather}) {
     );
 }
 
-
 export default WeatherTable;

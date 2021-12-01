@@ -21,5 +21,4 @@ function DistilleryTable({distilleries}) {
     );
 }
 
-
 export default DistilleryTable;

@@ -21,5 +21,4 @@ function WineryTable({wineries}) {
     );
 }
 
-
 export default WineryTable;

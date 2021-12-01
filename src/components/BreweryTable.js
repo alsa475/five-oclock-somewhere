@@ -21,5 +21,4 @@ function BreweryTable({ results }) {
     );
 }
 
-
 export default BreweryTable;
