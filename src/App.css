@@ -1,4 +1,6 @@
 body {
+  background-image: url('./images/map.jpeg');
+  background-size: cover;
   background-color: bisque;
 }
 
@@ -9,7 +11,7 @@ h1 {
 }
 
 h2 {
-  color: forestgreen;
+  color: maroon;
   font-size: 30px;
   text-align: center;
 }
@@ -21,6 +23,7 @@ label {
 }
 
 p {
+  text-align: center;
   font-size: 24px;
   color: brown;
 }
@@ -71,12 +74,13 @@ form {
 table, td {
   width: 600px;
   border: 1px solid black;
-  background: rgba(241, 238, 230, 0.945);
+  background: rgb(253, 251, 247);
+  ;
 }
 
 th {
   border: 1px solid black;
-  background: cornsilk;
+  background: rgb(250, 225, 188);
 }
 
 a {

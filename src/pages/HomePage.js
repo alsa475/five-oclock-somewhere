@@ -79,7 +79,7 @@ function HomePage(){
                 {/* Get location from user */}
                 <label>Where to?  
                     <input class="where" type="text" value={location} size="30" maxlength="100" 
-                    placeholder="City, State (e.g. Colorado Springs, CO)" required="required"
+                    placeholder="City, State (e.g. Denver, CO)" required="required"
                     onChange={e => setLocation(e.target.value)}/>
                 </label>
       

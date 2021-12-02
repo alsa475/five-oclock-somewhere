@@ -15,18 +15,18 @@ function DistilleryPage(){
             <DistilleryTable distilleries={searchResults}></DistilleryTable>
             <br></br>
 
-            <h2>Weather</h2>
+            <h2>The weather at your location</h2>
             
             <WeatherTable weather={weatherConditions[0]}></WeatherTable>
+            
             <br></br>
-
-            <br></br>
+            <p>Enjoy your visit!</p>
+            
             <nav>
                 <Link to='/'>Return Home</Link>
             </nav>
         </div>
     );  
-
 }
 
 export default DistilleryPage;
